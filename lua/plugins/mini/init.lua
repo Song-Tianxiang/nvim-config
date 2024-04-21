@@ -1,18 +1,4 @@
 return {
-    {
-        'echasnovski/mini.comment',
-        version = false,
-        keys = {
-            {'gc', mode = { 'n', 'x', 'o', } },
-        },
-        config = function()
-            require('mini.comment').setup({
-                options = {
-                    ignore_blank_line = true,
-                },
-            })
-        end
-    },
 
     {
         'echasnovski/mini.indentscope',

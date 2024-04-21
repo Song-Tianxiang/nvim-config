@@ -5,5 +5,6 @@ return {
         config = function()
             require('smart-tab').setup()
         end
-    }
+    },
+
 }

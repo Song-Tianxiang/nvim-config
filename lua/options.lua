@@ -5,6 +5,7 @@ g.mapleader = ' '
 g.maplocalleader = '\\'
 
 o.termguicolors = true
+vim.cmd.colorscheme('retrobox')
 
 o.number = true
 o.cursorline = true
@@ -13,7 +14,7 @@ o.cursorlineopt = 'number'
 o.tabstop = 8
 o.softtabstop = 4
 o.shiftwidth = 4
-o.expandtab = true
+o.expandtab = false
 
 o.ignorecase = true
 o.smartcase = true
@@ -43,3 +44,12 @@ vim.g["loaded_node_provider"] = 0
 vim.g["loaded_python3_provider"] = 0
 vim.g["loaded_perl_provider"] = 0
 vim.g["loaded_ruby_provider"] = 0
+
+vim.g['loaded_matchparen'] = 1
+vim.g['loaded_gzip'] = 1
+vim.g['loaded_zip'] = 1
+vim.g['loaded_zipPlugin'] = 1
+vim.g['loaded_tar'] = 1
+vim.g['loaded_tarPlugin'] = 1
+vim.g['loaded_netrw'] = 1
+vim.g['loaded_netrwPlugin'] = 1

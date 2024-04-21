@@ -2,8 +2,11 @@ return {
     {
         "nvim-telescope/telescope.nvim",
         branch = '0.1.x',
-        build = { 'cargo install ripgrep', 'cargo install fd-find', },
         cmd = "Telescope",
+        keys = {
+            {'<Leader>ff', mode = 'n'},
+            {'<Leader>fb', mode = 'n'},
+        },
         dependencies = {
             'nvim-tree/nvim-web-devicons',
             "nvim-lua/plenary.nvim",
@@ -16,12 +19,15 @@ return {
             },
 
         },
+	config = function()
+            vim.keymap.set("n", "<Leader>fb", "<Cmd>Telescope buffers<CR>")
+	end,
     },
 
     {
         "nvim-telescope/telescope-frecency.nvim",
         keys = {
-            {'<Leader>f', mode = 'n'},
+            {'<Leader>ff', mode = 'n'},
         },
         dependencies = {
             "nvim-telescope/telescope.nvim",
@@ -35,7 +41,15 @@ return {
                     }
                 },
             }
-            vim.keymap.set("n", "<Leader>f", "<Cmd>Telescope frecency<CR>")
+            vim.keymap.set("n", "<Leader>ff", "<Cmd>Telescope frecency<CR>")
         end,
     },
+
+    {
+        'pbogut/fzf-mru.vim',
+        dependencies = {
+            'junegunn/fzf',
+        },
+        cmd = 'FZFMru',
+    }
 }
